@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <title>dododod0doooooodo000oOOoodododod</title>
+
+    <div id="images">
+      <img id="logo" src="https://i.imgur.com/W3r0b7l.png" />
+
+      <img id="sun" src="https://i.imgur.com/2goygQG.png" width="240px" />
+
+      <img id="cloud_1" src="https://i.imgur.com/QaWoiFI.png" />
+      <img id="cloud_2" src="https://i.imgur.com/VumYDu0.png" />
+      <img id="cloud_3" src="https://i.imgur.com/VumYDu0.png" />
+      <img id="cloud_4" src="https://i.imgur.com/RYHR4D2.png" />
+      <img id="head" src="https://i.imgur.com/XdvwRIR.png" />
+      <img id="face" src="https://i.imgur.com/1ZZOzS6.png" />
+    </div>
+    
+    <div id="bio">
+      <p>
+        My name is Dodo, I'm an artist, producer and a student at CalArts
+        <br>I'm instered in synthesizer programming, sunshises, Mc Donald's and good feelings
+        <br>I work with songs, films and any type of art form that has sound and fun people
+        <br>this is my <a href="https://www.youtube.com/channel/UCattzoRHcrIfL9H7tm7h7OA">youtube channel</a>, <a href="https://soundcloud.com/dodod0do">soundcloud</a>, <a href="https://twitter.com/dodod0do">twitter</a> and <a href="https://www.instagram.com/dodod0do_/">instagram</a>
+        <br> you can also buy my music <a>here</a>
+      </p>
+      
+    </div>
+    
+
+    <script>
+      //Make the DIV element draggagle:
+      dragElement(document.getElementById("sun"));
+      dragElement(document.getElementById("cloud_1"));
+      dragElement(document.getElementById("cloud_2"));
+      dragElement(document.getElementById("cloud_3"));
+      dragElement(document.getElementById("cloud_4"));
+      dragElement(document.getElementById("face"));
+      dragElement(document.getElementById("head"));
+      dragElement(document.getElementById("logo"));
+
+      function dragElement(elmnt) {
+        var pos1 = 0,
+          pos2 = 0,
+          pos3 = 0,
+          pos4 = 0;
+        if (document.getElementById(elmnt.id + "header")) {
+          /* if present, the header is where you move the DIV from:*/
+          document.getElementById(elmnt.id + "header").onmousedown =
+            dragMouseDown;
+        } else {
+          /* otherwise, move the DIV from anywhere inside the DIV:*/
+          elmnt.onmousedown = dragMouseDown;
+        }
+
+        function dragMouseDown(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementDrag;
+        }
+
+        function elementDrag(e) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          // set the element's new position:
+          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+        }
+
+        function closeDragElement() {
+          /* stop moving when mouse button is released:*/
+          document.onmouseup = null;
+          document.onmousemove = null;
+        }
+      }
+    </script>
+  </body>  
+</html>
+
