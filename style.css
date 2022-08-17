@@ -2,6 +2,13 @@ body {
   background-image: url(https://i.imgur.com/nAjEN2G.png);
 }
 
+#example {
+  font-family: Helvetica Neue;
+  font-weight: bold;
+  font-size: 20px;
+  color: #FF1493;
+}
+
 #logo {
   min-width: 800px;
   width: 10%;
@@ -55,7 +62,6 @@ body {
   position: absolute;
   left: 78%;
   top: 60%;
-  
 }
 
 #face {
@@ -68,11 +74,15 @@ body {
 #bio {
   bottom: 0;
   font-size: 2vw;
-  color:yellow;
+  color: yellow;
   position: fixed;
-  
 }
-  
 
-  
-
+@media screenand (max-width: 799px) {
+  #logo {
+    width: 20%;
+  }
+  #sun {
+    width: 30%;
+  }
+}
