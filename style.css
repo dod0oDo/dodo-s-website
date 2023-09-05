@@ -1,12 +1,12 @@
 body {
-  background-image: url(https://i.imgur.com/nAjEN2G.png);
+  background-image: url(https://i.imgur.com/rwAzpUZ.png);
 }
 
 #example {
-  font-family: Helvetica Neue;
-  font-weight: bold;
-  font-size: 20px;
-  color: #FF1493;
+  font-family: Arial;
+ font-weight: ;
+  font-size: 30px;
+  color: #262626;
 }
 
 #logo {
@@ -14,22 +14,23 @@ body {
   width: 10%;
   position: absolute;
   left: 25%;
+  top: 40%;
 }
 
 #sun {
   min-width: 300px;
   width: 10%;
   position: absolute;
-  left: 82%;
-  top: 10%;
+  left: 40%;
+  top: 30%;
 }
 
-#cloud_1 {
+#facephoto_1 {
   min-width: 300px;
   width: 10%;
   position: absolute;
-  left: 58%;
-  top: 0%;
+  left: 15%;
+  top: 35%;
 }
 
 #cloud_2 {
@@ -60,8 +61,8 @@ body {
   min-width: 300px;
   width: 10%;
   position: absolute;
-  left: 78%;
-  top: 60%;
+  left: 15%;
+  top: 33%;
 }
 
 #face {
@@ -72,10 +73,11 @@ body {
 }
 
 #bio {
-  bottom: 0;
+  top: 0px;
   font-size: 2vw;
   color: yellow;
-  position: fixed;
+  position: absolute;
+   left: 25%;
 }
 
 @media screenand (max-width: 799px) {
